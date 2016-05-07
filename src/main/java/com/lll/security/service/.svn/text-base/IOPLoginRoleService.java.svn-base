@@ -1,0 +1,9 @@
+package com.sitech.security.service;
+
+import com.sitech.security.entity.OPLoginMsg;
+
+public interface IOPLoginRoleService {
+	public boolean saveOPLoginRole(OPLoginMsg opLoginMsg, String mark);
+	public boolean deleteOPLoginRole(String loginNo);
+	public boolean deleteFlowRolesByLoginNo(String loginNo);
+}

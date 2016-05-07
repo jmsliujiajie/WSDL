@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE configuration  
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"  
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- mybatis主配置文件 20130520 gaopeng 以后都要这么写 -->
+	<settings>
+		<!-- 启用懒加载 -->
+		<setting name="lazyLoadingEnabled" value="true" />
+		<!-- 按需加载 -->
+		<setting name="aggressiveLazyLoading" value="false" />
+	</settings>
+
+  <!-- 别名区域,切记,namespace不能取别名 -->
+  <typeAliases>
+  <!-- security -->
+    
+  </typeAliases>  
+  
+	<mappers>
+		<!-- mybatispage -->
+		<mapper resource="mapping/mybatispage/MyBatisPage.xml" />
+		
+	</mappers>
+</configuration>

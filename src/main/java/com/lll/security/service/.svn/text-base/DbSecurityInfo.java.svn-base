@@ -1,0 +1,56 @@
+package com.sitech.security.service;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.ConfigAttribute;
+import org.springframework.security.access.SecurityConfig;
+import org.springframework.stereotype.Component;
+
+import com.sitech.security.dao.MyBatisDao;
+import com.sitech.security.entity.Authority;
+
+/** 
+* @description 加载security时，将资源的path加载进去
+* @20130501
+* @author gaopeng 
+*/
+@Component
+public class DbSecurityInfo {
+	
+	@Autowired
+	private MyBatisDao dao;
+	
+	public Map<String, Collection<ConfigAttribute>> loadResourceDefine(){
+		Map<String, Collection<ConfigAttribute>> resourceMap = new HashMap<String, Collection<ConfigAttribute>>();
+//		List<Role> roles = roleDao.getAll("id", true);
+//		for (Role role : roles) {
+//			ConfigAttribute ca = new SecurityConfig(role.getName());
+//			List<Authority> authoritys = role.getAuthorityList();
+//			
+//			for (Authority authority : authoritys) {
+//				if (resourceMap.containsKey(authority.getPath())) {
+//					resourceMap.get(authority.getPath()).add(ca);
+//				} else {
+//					Collection<ConfigAttribute> atts = new ArrayList<ConfigAttribute>();
+//					atts.add(ca);
+//					resourceMap.put(authority.getPath(), atts);
+//				}
+//			}
+//		}
+		List<Authority> authorities = dao.getList("SecurityMapper.getAllAuthorities");
+		for (Authority authority : authorities){
+			Collection<ConfigAttribute> configAttributes = new ArrayList<ConfigAttribute>();
+			ConfigAttribute configAttribute = new SecurityConfig(authority.getPrefixedName());
+			configAttributes.add(configAttribute);
+			resourceMap.put(authority.getPath(), configAttributes);
+		}
+		
+		return resourceMap;
+	}
+
+
+}

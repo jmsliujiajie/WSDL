@@ -1,0 +1,44 @@
+package com.sitech.security.dao;
+
+import org.mybatis.spring.support.SqlSessionDaoSupport;
+
+import com.sitech.security.entity.OPLoginRole;
+
+public class OPLoginRoleDao extends SqlSessionDaoSupport{
+	
+	//添加角色工号关系
+	public boolean saveOPLoginRole(String key, OPLoginRole opLoginRole){
+		boolean flag = false;
+		try {
+			flag = this.getSqlSession().insert(key, opLoginRole) > 0 ? true : false;
+		} catch (Exception e) {
+			logger.error("执行 SQL " + key + " 出错 ！！！！" + e.getMessage());
+			return false;
+		}
+		return flag;
+	}
+	
+	//删除与工号对应绑定的非流程角色关系
+	public boolean deleteOPLoginRole(String key, String loginNo){
+		try {
+			this.getSqlSession().delete(key, loginNo);
+		} catch (Exception e) {
+			logger.error("执行 SQL " + key + " 出错 ！！！！" + e.getMessage());
+			return false;
+		}
+		return true;
+	}
+	
+	//删除与工号对应绑定的流程角色关系
+	public boolean deleteFlowRolesByLoginNo(String key, String loginNo){
+		try {
+			this.getSqlSession().delete(key, loginNo);
+		} catch (Exception e) {
+			logger.error("执行 SQL " + key + " 出错 ！！！！" + e.getMessage());
+			return false;
+		}
+		return true;
+	}
+	
+	
+}

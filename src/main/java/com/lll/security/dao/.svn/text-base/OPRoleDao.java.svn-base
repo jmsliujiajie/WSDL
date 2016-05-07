@@ -1,0 +1,40 @@
+package com.sitech.security.dao;
+
+import org.mybatis.spring.support.SqlSessionDaoSupport;
+
+import com.sitech.security.entity.OPRole;
+
+public class OPRoleDao extends SqlSessionDaoSupport{
+
+	//按roleId查找单一角色
+	public OPRole findOPRoleByRoleId(String key, String roleId){
+		return this.getSqlSession().selectOne(key, roleId);
+	}
+	
+	//添加角色
+	public boolean addOPRole(String key , OPRole opRole){
+		boolean flag = false;
+		try {
+			logger.debug(" 执行增加 ");
+			flag = this.getSqlSession().insert(key, opRole) > 0 ? true : false;
+			logger.debug(" 对应Mapper: = " + key);
+			logger.debug(" Mapper入参: = " + opRole);
+		} catch (Exception e) {
+			logger.error("执行 SQL " + key + " 出错 ！！！！" + e.getMessage());
+			return false;
+		}
+		return flag;
+	}
+	//修改角色
+	public boolean updateOPRole(String key, OPRole opRole){
+		boolean flag = false;
+		try {
+			flag = this.getSqlSession().update(key, opRole) > 0 ? true : false;
+		} catch (Exception e) {
+			logger.error("执行 SQL " + key + " 出错 ！！！！" + e.getMessage());
+			return false;
+		}
+		return flag;
+	}
+
+}

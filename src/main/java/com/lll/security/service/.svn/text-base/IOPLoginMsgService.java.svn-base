@@ -1,0 +1,7 @@
+package com.sitech.security.service;
+
+import com.sitech.security.entity.OPLoginMsg;
+
+public interface IOPLoginMsgService {
+	public OPLoginMsg findLoginMsgByLoginNo(String loginNo);
+}

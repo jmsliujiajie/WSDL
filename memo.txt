@@ -1,0 +1,28 @@
+-----------hejwa------add-----------后台部署遇到的问题--------2014年6月19日15:04:07-----
+1、stax-api-1.0.1.jar包冲突
+	有的中间件如weblogic会带类似的jar包，导致与项目的jar包冲突，如果有冲突需要删掉此jar包，没冲突情况可以使用
+	java.lang.LinkageError: loader constraint violation: loader (instance of weblogic/utils/classloaders/ChangeAwareClassLoader) previously initiated loading for a different type with name "javax/xml/namespace/QName"
+2、spring2.5.jar冲突
+	与org.springframework.web-3.1.1.RELEASE.jar包冲突，但里面的冲突的是抽象方法，有的中间件解析没冲突，冲突的情况需要删除spring2.5.jar
+	<2014-6-19 下午03时02分46秒 CST> <Error> <HTTP> <BEA-101216> <Servlet: "springmvc" failed to preload on startup in Web application: "HallCMS".
+java.lang.NoSuchMethodError: org.springframework.web.context.ConfigurableWebApplicationContext.setConfigLocation(Ljava/lang/String;)V
+        at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:586)
+        at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:645)
+        at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:508)
+        at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:449)
+        at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:133)
+        Truncated. see log file for complete stacktrace
+	
+----------hejwa----------add-----------黑龙江测试环境部署问题---------2014年7月9日8:43:11---------------
+3、xalan-2.7.0.jar 冲突
+org.springframework.beans.factory.BeanCreationException: Error creating bean with 
+DOM2DTMdefaultNamespaceDeclarationNode.getSchemaTypeInfo()Lorg/w3c/dom/TypeInfo
+java.lang.VerifyError: JVMVRFY013 class loading constraint violated
+
+
+
+
+
+
+
+	

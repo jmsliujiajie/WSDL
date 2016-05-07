@@ -1,0 +1,38 @@
+[INFO][2014-05-04 14:25:59,562][org.apache.commons.httpclient.HttpMethodDirector]I/O exception (java.net.ConnectException) caught when processing request: Connection refused: connect
+[INFO][2014-05-04 14:25:59,578][org.apache.commons.httpclient.HttpMethodDirector]Retrying request
+[INFO][2014-05-04 14:26:00,562][org.apache.commons.httpclient.HttpMethodDirector]I/O exception (java.net.ConnectException) caught when processing request: Connection refused: connect
+[INFO][2014-05-04 14:26:00,562][org.apache.commons.httpclient.HttpMethodDirector]Retrying request
+[INFO][2014-05-04 14:26:01,578][org.apache.commons.httpclient.HttpMethodDirector]I/O exception (java.net.ConnectException) caught when processing request: Connection refused: connect
+[INFO][2014-05-04 14:26:01,578][org.apache.commons.httpclient.HttpMethodDirector]Retrying request
+[INFO][2014-05-04 14:26:02,578][org.apache.axis2.transport.http.HTTPSender]Unable to sendViaPost to url[http://127.0.0.1:8008/HallCMS/services/hallCMSWs]
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.commons.httpclient.protocol.ReflectionSocketFactory.createSocket(ReflectionSocketFactory.java:140)
+	at org.apache.commons.httpclient.protocol.DefaultProtocolSocketFactory.createSocket(DefaultProtocolSocketFactory.java:125)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.axis2.transport.http.AbstractHTTPSender.executeMethod(AbstractHTTPSender.java:621)
+	at org.apache.axis2.transport.http.HTTPSender.sendViaPost(HTTPSender.java:193)
+	at org.apache.axis2.transport.http.HTTPSender.send(HTTPSender.java:75)
+	at org.apache.axis2.transport.http.CommonsHTTPTransportSender.writeMessageWithCommons(CommonsHTTPTransportSender.java:404)
+	at org.apache.axis2.transport.http.CommonsHTTPTransportSender.invoke(CommonsHTTPTransportSender.java:231)
+	at org.apache.axis2.engine.AxisEngine.send(AxisEngine.java:443)
+	at org.apache.axis2.description.OutInAxisOperationClient.send(OutInAxisOperation.java:406)
+	at org.apache.axis2.description.OutInAxisOperationClient.executeImpl(OutInAxisOperation.java:229)
+	at org.apache.axis2.client.OperationClient.execute(OperationClient.java:165)
+	at org.apache.axis2.client.ServiceClient.sendReceive(ServiceClient.java:555)
+	at org.apache.axis2.client.ServiceClient.sendReceive(ServiceClient.java:531)
+	at org.apache.axis2.rpc.client.RPCServiceClient.invokeBlocking(RPCServiceClient.java:102)
+	at com.sitech.testWs.TestWsClinet.main(TestWsClinet.java:29)
