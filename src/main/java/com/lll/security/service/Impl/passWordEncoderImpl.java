@@ -9,7 +9,6 @@ import com.lll.util.EncodeUtils;
 /** 
 * @description 加入自定义加密输入的密码方法,与数据库或接口密码做匹配的方法
 * @date 20130905 
-* @author gaopeng 
 */
 public class passWordEncoderImpl implements PasswordEncoder{
 

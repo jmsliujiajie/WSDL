@@ -29,7 +29,6 @@ import org.codehaus.jackson.map.SerializationConfig.Feature;
 /**
  * Http与Servlet工具类.
  * 
- * @author calvin
  */
 public class ServletUtils {
 

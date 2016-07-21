@@ -27,7 +27,6 @@ import org.springframework.security.web.authentication.preauth.PreAuthenticatedA
  * 
  * 注意. 本类只支持SpringSecurity 3.0.x.
  * 
- * @author gaopeng
  */
 public class SpringSecurityUtils {
 	/**

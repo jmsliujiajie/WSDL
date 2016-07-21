@@ -13,7 +13,6 @@ public class ResultController {
 	/** 
 	 * @description  需要跳转页面的方法
 	 * @date 2013-5-11 
-	 * @author gaopeng 
 	 * @param content
 	 * @return
 	 */

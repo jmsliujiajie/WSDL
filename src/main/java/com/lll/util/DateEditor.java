@@ -9,7 +9,6 @@ import java.util.Date;
 
 /**
  * 日期转化器
- * @author zhouby
  */
 public class DateEditor extends PropertyEditorSupport {
 

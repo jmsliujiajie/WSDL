@@ -6,7 +6,6 @@ import org.springframework.dao.DataAccessException;
 
 
 /**
- * @author zhouby
  */
 public class HallException extends DataAccessException {
     private static final long serialVersionUID = 1L;

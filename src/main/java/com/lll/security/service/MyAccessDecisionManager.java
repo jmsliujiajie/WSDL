@@ -16,7 +16,6 @@ import org.springframework.security.core.GrantedAuthority;
 /** 
 * @description 
 * @20130501 投票器
-* @author gaopeng 
 */
 public class MyAccessDecisionManager implements AccessDecisionManager {
 

@@ -17,7 +17,6 @@ import org.springframework.stereotype.Component;
 /** 
 * @description 登录成功的业务方法
 * 
-* @author gaopeng 
 */
 @Component
 public class LoginLogHandler implements AuthenticationSuccessHandler {

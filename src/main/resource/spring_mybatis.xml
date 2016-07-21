@@ -55,7 +55,14 @@
 	<bean id="MyBatisDao" class="com.lll.security.dao.MyBatisDao">
 		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
 	</bean>
+	
+	<bean id="userInfoDao" class="com.lll.userInfo.dao.UserInfoDao">
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
 
+	<bean id="userPointsInfoDao" class="com.lll.userInfo.dao.UserPointsInfoDao">
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
 	
 	<!-- 配置事务管理器 -->
 	<bean id="transactionManager"

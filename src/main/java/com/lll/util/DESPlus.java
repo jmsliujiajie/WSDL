@@ -92,7 +92,6 @@ public class DESPlus {
 
      *             本方法不处理任何异常，所有异常全部抛出
 
-     * @author <a href="mailto:leo841001@163.com">LiGuoQing</a>
 
      */
 

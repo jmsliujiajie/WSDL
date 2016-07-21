@@ -8,7 +8,6 @@ import java.util.Date;
 /**
  * @description 时间工具类
  * @20130426
- * @author gaopeng
  */
 public class DateUtils {
 
@@ -39,7 +38,6 @@ public class DateUtils {
     /**
      * @description 获取当前年月 如201309
      * @date 2013-9-24
-     * @author gaopeng
      * @return
      */
     public static String getCurrentMonth() {
@@ -49,7 +47,6 @@ public class DateUtils {
     /**
      * @description 获取前一天的年月日  如2013年9月29日获取的为 20130928
      * @date 2013-9-24
-     * @author gaopeng
      * @return
      */
     public static String getBeforeDay() {

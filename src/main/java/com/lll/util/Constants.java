@@ -10,7 +10,6 @@ import org.springframework.ui.Model;
 /**
  * @description 常量单元类
  * 
- * @author gaopeng
  */
 public class Constants {
 	
@@ -452,7 +451,6 @@ public class Constants {
 	/**
 	 * @description 公共的常量放入model方法
 	 * @date 2013-8-27
-	 * @author gaopeng
 	 * @param model
 	 */
 	public static void init(Model model) {
@@ -632,7 +630,6 @@ public class Constants {
 	/**
 	 * @description 抛出异常公共方法
 	 * @date 2013-9-29
-	 * @author gaopeng
 	 * @param e
 	 * @param retCode
 	 * @param retMsg

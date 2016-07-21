@@ -10,7 +10,6 @@ import org.apache.commons.lang.StringUtils;
 /** 
 * @description MyBatisPage
 * 
-* @author gaopeng 
 */
 public class Pago<T> {
 

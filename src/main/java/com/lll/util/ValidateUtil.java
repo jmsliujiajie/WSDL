@@ -6,7 +6,6 @@ import java.util.regex.Pattern;
 
 
 /**
- * @author zhouby
  */
 public class ValidateUtil {
 

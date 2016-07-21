@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
 /**
- * @author zhouby
  */
 public class ConstantsUtil {
     

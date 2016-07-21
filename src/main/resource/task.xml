@@ -1,13 +1,3 @@
-?xml version="1.0" encoding="GBK"?>
+<?xml version="1.0" encoding="GBK"?>
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 
-<beans>
-    <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
-       <!-- 添加触发器 -->
-       <property name="triggers">
-           <list>
-              <ref local="cronTrigger"/>
-           </list>
-       </property>
-    </bean>
-</beans>

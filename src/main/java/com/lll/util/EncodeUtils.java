@@ -24,7 +24,6 @@ import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
  * 
  * 集成Commons-Codec,Commons-Lang及JDK提供的编解码方法.
  * 
- * @author calvin
  */
 public class EncodeUtils {
 

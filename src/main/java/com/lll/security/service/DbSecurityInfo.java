@@ -12,7 +12,6 @@ import com.lll.security.dao.MyBatisDao;
 /** 
 * @description 加载security时，将资源的path加载进去
 * @20130501
-* @author gaopeng 
 */
 @Component
 public class DbSecurityInfo {

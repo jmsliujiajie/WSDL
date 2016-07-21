@@ -20,6 +20,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<mappers>
 		<!-- mybatispage -->
 		<mapper resource="mapping/mybatispage/MyBatisPage.xml" />
-		
+		<mapper resource="mapping/UserInfoMapper.xml" />
+		<mapper resource="mapping/UserPointsInfoMapper.xml" />
 	</mappers>
 </configuration>

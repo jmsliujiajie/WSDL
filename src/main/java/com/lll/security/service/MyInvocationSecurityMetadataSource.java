@@ -15,7 +15,6 @@ import org.springframework.security.web.util.UrlMatcher;
 /** 
 * @description MyInvocationSecurityMetadataSource
 * @20130501
-* @author gaopeng 
 */
 public class MyInvocationSecurityMetadataSource implements FilterInvocationSecurityMetadataSource {
 

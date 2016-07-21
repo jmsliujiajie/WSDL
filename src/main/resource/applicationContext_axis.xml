@@ -6,5 +6,7 @@
 		class="org.apache.axis2.extensions.spring.receivers.ApplicationContextHolder" />
 
 	<bean id="TestWs" class="com.lll.test.TestWS"></bean>
+	<bean id="UserInfoWs" class="com.lll.userInfo.controller.UserInfo"></bean>
+	<bean id="UserPointsInfoWs" class="com.lll.userInfo.controller.UserPointsInfo"></bean>
 	
 </beans>

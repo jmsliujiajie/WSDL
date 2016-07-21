@@ -21,7 +21,6 @@ import org.springframework.security.web.access.intercept.FilterInvocationSecurit
 /** 
 * @description MyFilterSecurityInterceptor
 * @20130501
-* @author gaopeng 
 */
 public class MyFilterSecurityInterceptor extends AbstractSecurityInterceptor implements Filter {
 

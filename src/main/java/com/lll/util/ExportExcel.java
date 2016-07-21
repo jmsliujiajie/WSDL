@@ -26,7 +26,6 @@ import com.google.common.collect.Lists;
 /**
  * 利用开源组件POI3.0.2动态导出EXCEL文档 转载时请保留以下信息，注明出处！
  * 
- * @author leno
  * @version v1.0
  * @param <T>
  *            应用泛型，代表任意一个符合javabean风格的类

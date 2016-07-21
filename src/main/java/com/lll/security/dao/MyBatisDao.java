@@ -13,7 +13,6 @@ import com.lll.util.orm.MyBatisPage;
 /**
  * @description Mybatis的dao基类
  * @date 20130426
- * @author gaopeng
  */
 public class MyBatisDao extends SqlSessionDaoSupport implements IMyBatisDao {
 	private static Logger logger = LoggerFactory.getLogger(MyBatisDao.class);
@@ -21,7 +20,6 @@ public class MyBatisDao extends SqlSessionDaoSupport implements IMyBatisDao {
 	/** 
 	 * @description  保存并返回boolean类型
 	 * @date 2013-5-4 
-	 * @author gaopeng 
 	 * @param key
 	 * @param object
 	 * @return true or false
@@ -43,7 +41,6 @@ public class MyBatisDao extends SqlSessionDaoSupport implements IMyBatisDao {
 	/** 
 	 * @description  通过主键删除，并返回boolean类型
 	 * @date 2013-5-4 
-	 * @author gaopeng 
 	 * @param key
 	 * @param id
 	 * @return	true or false
@@ -64,7 +61,6 @@ public class MyBatisDao extends SqlSessionDaoSupport implements IMyBatisDao {
 	/** 
 	 * @description  通过OBJ删除，并返回boolean类型
 	 * @date 2013-5-4 
-	 * @author gaopeng 
 	 * @param key
 	 * @param Obj
 	 * @return	true or false
@@ -101,7 +97,6 @@ public class MyBatisDao extends SqlSessionDaoSupport implements IMyBatisDao {
 	/** 
 	 * @description  通过OBJ修改，并返回boolean类型
 	 * @date 2013-5-4 
-	 * @author gaopeng 
 	 * @param key
 	 * @param obj
 	 * @return	true or false
@@ -152,7 +147,6 @@ public class MyBatisDao extends SqlSessionDaoSupport implements IMyBatisDao {
 	/**
 	 * @description 加载分页方法，查询sql的结果count set进MyBatisPage中
 	 * @date 2013-4-27
-	 * @author gaopeng
 	 * @param key
 	 * @param page
 	 * @param conditions
@@ -181,7 +175,6 @@ public class MyBatisDao extends SqlSessionDaoSupport implements IMyBatisDao {
 	/**
 	 * @description 分页基类
 	 * @date 2013-4-27
-	 * @author gaopeng
 	 * @param key
 	 * @param page
 	 * @param conditions

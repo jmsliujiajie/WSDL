@@ -11,7 +11,6 @@ import net.sf.json.JSONObject;
 
 /**
  * json处理的工具类，如json串转json对象、json对象与java对象的转化等功能
- * @author hejw 2014年5月5日9:33:40
  */
 public class JSONTool {
 
@@ -43,6 +42,25 @@ public class JSONTool {
 			while (it.hasNext()) {
 				String key = (String) it.next();
 				String value = jSONObject.getString(key);
+				hashMap.put(key, value);
+			}
+		}
+		return hashMap;
+	}
+	
+	/**
+	 * json字符串转化为 HashMap<String ,String>
+	 * @param hashmap
+	 */
+	public static HashMap<String, Object> getMap_F_JsonStr_Object(String jsonStr) {
+		HashMap<String, Object> hashMap = new HashMap<String, Object>();
+		JSONObject jSONObject = getJson_F_Str(jsonStr);
+		if (jSONObject != null) {
+			@SuppressWarnings("unchecked")
+			Iterator<String> it = jSONObject.keys();
+			while (it.hasNext()) {
+				String key = (String) it.next();
+				Object value = jSONObject.get(key);
 				hashMap.put(key, value);
 			}
 		}
