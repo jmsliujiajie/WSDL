@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="UserInfoMapper" >
+
+	<insert id="insert" parameterType="Map">
+		INSERT INTO USER_INFO 
+			(USER_ID, LOGIN_ID, PASSWD, TELPHONE,CERT_ID,STUDENT_ID,SCHOOL_ID,
+			SEX, AGE, AUTHORITY, STATUS, REMARK, CREATE_TIME, IMAGE)
+		VALUES 
+			(USER_SEQ.NEXTVAL, #{LOGIN_ID}, #{PASSWD}, #{TELPHONE},#{CERT_ID},#{STUDENT_ID},#{SCHOOL_ID},
+			#{SEX}, #{AGE}, #{AUTHORITY}, #{STATUS}, #{REMARK}, SYSDATE, #{IMAGE, jdbcType=BLOB})
+	</insert>
+	
+	<select id="query" parameterType="Map" resultType = "Map">
+		SELECT USER_ID,LOGIN_ID,PASSWD,TELPHONE,CERT_ID,STUDENT_ID,
+			SEX,AGE,AUTHORITY,STATUS 
+		FROM 
+			USER_INFO 
+		WHERE LOGIN_ID = #{LOGIN_ID} AND PASSWD = #{PASSWD}
+	</select>
+</mapper>

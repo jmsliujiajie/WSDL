@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="UserPointsInfoMapper" >
+
+	<insert id="insert" parameterType="Map">
+		INSERT INTO USER_POINTS_INFO 
+			(USER_ID, POINTS, POINTS_TYPE, REMARK, CREATE_TIME) 
+		VALUES 
+			(#{USER_ID}, #{POINTS}, #{POINTS_TYPE}, #{REMARK}, SYSDATE)
+	</insert>
+</mapper>
